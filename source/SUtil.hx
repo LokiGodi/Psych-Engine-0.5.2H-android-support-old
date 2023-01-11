@@ -24,6 +24,7 @@ enum StorageType
 {
 	ANDROID_DATA;
 	ROOT;
+	APP_DATA;
 }
 
 /**
@@ -110,7 +111,7 @@ class SUtil
 	/**
 	 * This returns the external storage path that the game will use by the type.
 	 */
-	public static function getPath(type:StorageType = ANDROID_DATA):String
+	public static function getPath(type:StorageType = APP_DATA):String
 	{
 		#if android
 		var daPath:String = '';
@@ -121,6 +122,8 @@ class SUtil
 				daPath = Context.getExternalFilesDir(null) + '/';
 			case ROOT:
 				daPath = Context.getFilesDir() + '/';
+			case APP_DATA:
+				daPath = Environment.getExternalStorageDirectory() + '/' + '.' + Lib.application.meta.get('file') + '/';
 		}
 		//if (!FileSystem.exists(SUtil.getPath() + Path.directory(daPath)))
 			//SUtill.copyContent(Path.directory(daPath), Path.directory(daPath)); //this shit was made by an undertale fan and its prob not gonna work
