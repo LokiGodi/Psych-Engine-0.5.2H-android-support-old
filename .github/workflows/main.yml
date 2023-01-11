@@ -53,11 +53,9 @@ jobs:
           haxelib install box2d --quiet
           haxelib install layout --quiet
           haxelib install systools --quiet
-          haxelib --never install flixel --quiet
+          haxelib --never install flixel 4.11.0 --quiet
           haxelib install flixel-tools --quiet
-          haxelib install flixel-ui --quiet
           haxelib install hscript --quiet
-          haxelib install flixel-addons --quiet
           haxelib install flixel-demos --quiet
           haxelib install flixel-templates --quiet
           haxelib git faxe https://github.com/uhrobots/faxe.git
@@ -67,7 +65,6 @@ jobs:
           haxelib git extension-videoview https://github.com/MAJigsaw77/extension-videoview.git
           haxelib set openfl 9.1.0
           haxelib set lime 7.9.0
-          haxelib install flixel 4.11.0 --quiet
           haxelib run lime setup flixel
           haxelib install flixel-ui 2.4.0
           haxelib install flixel-addons 2.11.0
@@ -144,11 +141,8 @@ jobs:
           haxelib install box2d --quiet
           haxelib install layout --quiet
           haxelib install systools --quiet
-          haxelib --never install flixel --quiet
           haxelib install flixel-tools --quiet
-          haxelib install flixel-ui --quiet
           haxelib install hscript --quiet
-          haxelib install flixel-addons --quiet
           haxelib install flixel-demos --quiet
           haxelib install flixel-templates --quiet
           haxelib git faxe https://github.com/uhrobots/faxe.git
